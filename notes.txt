@@ -4,7 +4,7 @@
 
 [ ] If you don't have access to Moodle, write me an email as soon as possible.
 [ ] Walk around the GitHub page.
-    [ ] What is that "For Home" section? (please remind Simo to explain it at the end of the second hour, in case he forgets!!)
+    [ ] What is that "For Home" section? (please remind Simo to explain it at the start of the second hour, in case he forgets!!)
 [ ] Yes, homework 3 is going to be during the Christmas holidays.
     Here is a timeline THAT MIGHT CHANGE:
         - homework 1: week 03 (2 programming tasks)
@@ -13,8 +13,7 @@
         - homework 3: week 11 (2 programming tasks)
         - homework 4: week 14 (2 programming tasks)
         - exam 2    : week 15 (8 theoretical questions + 4 programming tasks)
-[ ] If another time would more appropriate to you, let's discuss.
-[ ] During the intermission create a chat in Facebook (FP_CS_23-24)! Remind Simo if he forgets, please 😄!
+[ ] During the intermission create a chat in Facebook (FP_CS_23_24)! Remind Simo if he forgets, please 😄!
     Also keep in mind that if you want a fast/timely reply, you ought to send an email.
     I do not log into FB often!!
 
@@ -54,7 +53,6 @@ What is a predicate?
 
 
 Types of Evaluation Processes
-
    Linearly Recursive
         1. The result is stored in a recursive tail.
         2. The recursive call is part of an expression.

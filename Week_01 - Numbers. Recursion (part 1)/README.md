@@ -20,28 +20,30 @@ Define procedures that return:
 
 Test cases:
 
-    (= (my-min-built-in-p 5 6) 5)
+```scheme
+(= (my-min-built-in-p 5 6) 5)
 
-    (= (my-min-if -60 -15) -60)
-    (= (my-min-if 15 60) 15)
-    (= (my-min-if 60 15) 15)
+(= (my-min-if -60 -15) -60)
+(= (my-min-if 15 60) 15)
+(= (my-min-if 60 15) 15)
 
-    (= (my-min-guard 15 60) 15)
-    (= (my-min-guard 60 15) 15)
+(= (my-min-guard 15 60) 15)
+(= (my-min-guard 60 15) 15)
 
-    (= (last-digit 154) 4)
+(= (last-digit 154) 4)
 
-    (= (quotient-whole 64 2) 32)
+(= (quotient-whole 64 2) 32)
 
-    (div-whole 154 17) ; 9 1/17
+(div-whole 154 17) ; 9 1/17
 
-    (= (remove-last-digit 154) 15)
+(= (remove-last-digit 154) 15)
 
-    (= (div-real 154 10) 15.4)
+(= (div-real 154 10) 15.4)
 
-    (= (round-two-dig pi) 3.14)
+(= (round-two-dig pi) 3.14)
 
-    (= (average-whole 5 1542) 773.5)
+(= (average-whole 5 1542) 773.5)
+```
 
 # Task 2
 
@@ -52,11 +54,13 @@ Define two procedures that return the sum of the cubes of two numbers:
 
 Test cases:
 
-    (= (sum-cubes-pow 5 1) 126)
-    (= (sum-cubes-pow 10 50) 126000)
+```scheme
+(= (sum-cubes-pow 5 1) 126)
+(= (sum-cubes-pow 10 50) 126000)
 
-    (= (sum-cubes-no-pow 5 1) 126)
-    (= (sum-cubes-no-pow 10 50) 126000)
+(= (sum-cubes-no-pow 5 1) 126)
+(= (sum-cubes-no-pow 10 50) 126000)
+```
 
 # Task 3
 
@@ -64,40 +68,42 @@ Define a procedure that returns the average of the sum of the squares of two num
 
 Test cases:
 
-    (= (sq-avg 5 0) 12.5)
-    (= (sq-avg 10 13) 134.5)
+```scheme
+(= (sq-avg 5 0) 12.5)
+(= (sq-avg 10 13) 134.5)
+```
 
 # Task 4
 
 Define a recursive and an iterative procedure for calculating the factorial of a non-negative whole number.
 
-Implementation detail:
-
-    Add a test case with a negative number!
+> **Implementation detail**: Add a test case with a negative number!
 
 Test cases:
 
-    (= (fact-rec 0) 1)
-    (= (fact-rec 1) 1)
-    (= (fact-rec 11) 39916800)
+```scheme
+(= (fact-rec 0) 1)
+(= (fact-rec 1) 1)
+(= (fact-rec 11) 39916800)
 
-    (= (fact-iter 0) 1)
-    (= (fact-iter 1) 1)
-    (= (fact-iter 11) 39916800)
+(= (fact-iter 0) 1)
+(= (fact-iter 1) 1)
+(= (fact-iter 11) 39916800)
+```
 
 # Task 5
 
 Define a recursive procedure and an iterative procedure for calculating the number at index *i* in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...).
 
-Implementation detail:
-
-    Add a test case with a negative number!
+> **Implementation detail**: Add a test case with a negative number!
 
 Test cases:
 
-    (= (fib-rec 11) 89)
+```scheme
+(= (fib-rec 11) 89)
 
-    (= (fib-iter 11) 89)
+(= (fib-iter 11) 89)
+```
 
 # Task 6
 
@@ -113,21 +119,23 @@ Define predicates that check:
 
 Test cases:
 
-    (equal? (are-not-equal-one-line? 5 2) #t)
-    (equal? (are-not-equal-one-line? 5 5) #f)
+```scheme
+(equal? (are-not-equal-one-line? 5 2) #t)
+(equal? (are-not-equal-one-line? 5 5) #f)
 
-    (equal? (are-not-equal-guards? 5 2) #t)
-    (equal? (are-not-equal-guards? 5 5) #f)
+(equal? (are-not-equal-guards? 5 2) #t)
+(equal? (are-not-equal-guards? 5 5) #f)
 
-    (equal? (inside-one-line? 1 5 4) #t) ; start = 1, end = 5, x = 4
-    (equal? (inside-one-line? 5 1 4) #t)
-    (equal? (inside-one-line? 10 50 200) #f)
-    (equal? (inside-one-line? 10 50 1) #f)
+(equal? (inside-one-line? 1 5 4) #t) ; start = 1, end = 5, x = 4
+(equal? (inside-one-line? 5 1 4) #t)
+(equal? (inside-one-line? 10 50 200) #f)
+(equal? (inside-one-line? 10 50 1) #f)
 
-    (equal? (inside-boolean-ops? 1 5 4) #t)
-    (equal? (inside-boolean-ops? 5 1 4) #t)
-    (equal? (inside-boolean-ops? 10 50 200) #f)
-    (equal? (inside-boolean-ops? 10 50 1) #f)
+(equal? (inside-boolean-ops? 1 5 4) #t)
+(equal? (inside-boolean-ops? 5 1 4) #t)
+(equal? (inside-boolean-ops? 10 50 200) #f)
+(equal? (inside-boolean-ops? 10 50 1) #f)
+```
 
 # Task 7
 
@@ -138,13 +146,15 @@ Define two procedures that return whether a number is even:
 
 Test cases:
 
-    (equal? (is-even-if 2) "Yes")
-    (equal? (is-even-if 15452) "Yes")
-    (equal? (is-even-if 321) "No")
+```scheme
+(equal? (is-even-if 2) "Yes")
+(equal? (is-even-if 15452) "Yes")
+(equal? (is-even-if 321) "No")
 
-    (equal? (is-even-guards 2) "Yes")
-    (equal? (is-even-guards 15452) "Yes")
-    (equal? (is-even-guards 321) "No")
+(equal? (is-even-guards 2) "Yes")
+(equal? (is-even-guards 15452) "Yes")
+(equal? (is-even-guards 321) "No")
+```
 
 # For home
 
@@ -175,8 +185,10 @@ Using the above algorithm, define a procedure for calculating the GCD of two num
 
 Test cases:
 
-    (= (my-gcd 5 13) 1)
-    (= (my-gcd 13 1235) 13)
+```scheme
+(= (my-gcd 5 13) 1)
+(= (my-gcd 13 1235) 13)
+```
 
 ## Task 2
 
@@ -198,23 +210,25 @@ Recap:
 
 Test cases:
 
-    (equal? (leap-year-one-line? 2020) #t)
-    (equal? (leap-year-one-line? 1988) #t)
-    (equal? (leap-year-one-line? 1600) #t)
-    (equal? (leap-year-one-line? 2400) #t)
-    (equal? (leap-year-one-line? 2023) #f)
-    (equal? (leap-year-one-line? 1700) #f)
-    (equal? (leap-year-one-line? 1800) #f)
-    (equal? (leap-year-one-line? 2100) #f)
+```scheme
+(equal? (leap-year-one-line? 2020) #t)
+(equal? (leap-year-one-line? 1988) #t)
+(equal? (leap-year-one-line? 1600) #t)
+(equal? (leap-year-one-line? 2400) #t)
+(equal? (leap-year-one-line? 2023) #f)
+(equal? (leap-year-one-line? 1700) #f)
+(equal? (leap-year-one-line? 1800) #f)
+(equal? (leap-year-one-line? 2100) #f)
 
-    (equal? (is-leap-year-guards? 2020) #t)
-    (equal? (is-leap-year-guards? 1988) #t)
-    (equal? (is-leap-year-guards? 1600) #t)
-    (equal? (is-leap-year-guards? 2400) #t)
-    (equal? (is-leap-year-guards? 2023) #f)
-    (equal? (is-leap-year-guards? 1700) #f)
-    (equal? (is-leap-year-guards? 1800) #f)
-    (equal? (is-leap-year-guards? 2100) #f)
+(equal? (is-leap-year-guards? 2020) #t)
+(equal? (is-leap-year-guards? 1988) #t)
+(equal? (is-leap-year-guards? 1600) #t)
+(equal? (is-leap-year-guards? 2400) #t)
+(equal? (is-leap-year-guards? 2023) #f)
+(equal? (is-leap-year-guards? 1700) #f)
+(equal? (is-leap-year-guards? 1800) #f)
+(equal? (is-leap-year-guards? 2100) #f)
+```
 
 ## Task 3
 
@@ -226,16 +240,18 @@ Define a predicate that accepts three numbers - *c* (number of products), *k* an
 
 Test cases:
 
-    (equal? (can-carry? 5 15 3) #t)
-    (equal? (can-carry? 1 5 4) #t)
-    (equal? (can-carry? 13 25 2) #f)
-    (equal? (can-carry? 24 104.44 21.12) #f)
-    (equal? (can-carry? 51 34.75 19.852) #f)
-    (equal? (can-carry? 42 95.11 0.51) #t)
+```scheme
+(equal? (can-carry? 5 15 3) #t)
+(equal? (can-carry? 1 5 4) #t)
+(equal? (can-carry? 13 25 2) #f)
+(equal? (can-carry? 24 104.44 21.12) #f)
+(equal? (can-carry? 51 34.75 19.852) #f)
+(equal? (can-carry? 42 95.11 0.51) #t)
 
-    ; (can-carry? -13 25 2) ; error: The number of products was negative
-    ; (can-carry? 13 -25 2) ; error: John's hosting capacity was negative
-    ; (can-carry? 13 25 -2) ; error: The weight of a product was negative
+; (can-carry? -13 25 2) ; error: The number of products was negative
+; (can-carry? 13 -25 2) ; error: John's hosting capacity was negative
+; (can-carry? 13 25 -2) ; error: The weight of a product was negative
+```
 
 ## Task 4
 
@@ -243,10 +259,12 @@ Each **day** a plant is growing by *up-speed* meters. Each **night** that plants
 
 Test cases:
 
-    (= (growing-plant 5 2 5) 1)
-    (= (growing-plant 5 2 6) 2)
-    (= (growing-plant 10 9 4) 1)
-    (= (growing-plant 100 10 910) 10) ; up-speed=100, down-speed=10, desired-height=910
+```scheme
+(= (growing-plant 5 2 5) 1)
+(= (growing-plant 5 2 6) 2)
+(= (growing-plant 10 9 4) 1)
+(= (growing-plant 100 10 910) 10) ; up-speed=100, down-speed=10, desired-height=910
+```
 
 Explanations:
 
@@ -290,11 +308,13 @@ Calculate number of days the snail will need to reach the top of the column.
 
 Test cases:
 
-    (= (snail 3 2 1) 2)
-    (= (snail 10 3 1) 5)
-    (= (snail 10 3 2) 8)
-    (= (snail 100 20 5) 7)
-    (= (snail 5 10 3) 1)
+```scheme
+(= (snail 3 2 1) 2)
+(= (snail 10 3 1) 5)
+(= (snail 10 3 2) 8)
+(= (snail 100 20 5) 7)
+(= (snail 5 10 3) 1)
+```
 
 ## Task 6
 
@@ -302,6 +322,8 @@ Define a procedure that reverses a **non-negative** number by implementing a **l
 
 Test cases:
 
-    (= (rev 1) 1)
-    (= (rev 123) 321)
-    (= (rev 987654321) 123456789)
+```scheme
+(= (rev 1) 1)
+(= (rev 123) 321)
+(= (rev 987654321) 123456789)
+```
