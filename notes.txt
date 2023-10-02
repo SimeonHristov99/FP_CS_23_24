@@ -13,6 +13,11 @@
         - homework 3: week 11 (2 programming tasks)
         - homework 4: week 14 (2 programming tasks)
         - exam 2    : week 15 (8 theoretical questions + 4 programming tasks)
+[ ] Are we changing the hours? Note that there may not be available rooms.
+    - Monday: I'll be with Mihi and group 4 in the morning. Feel free to come then if more appropriate;
+    - Tuesday: after 5 pm;
+    - Wednesday: after 6 pm;
+    - Thursday: after 5 pm.
 [ ] During the intermission create a chat in Facebook (FP_CS_23_24)! Remind Simo if he forgets, please 😄!
     Also keep in mind that if you want a fast/timely reply, you ought to send an email.
     I do not log into FB often!!
