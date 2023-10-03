@@ -105,57 +105,6 @@ Test cases:
 (= (fib-iter 11) 89)
 ```
 
-# Task 6
-
-Define predicates that check:
-
-- whether two numbers are not equal:
-  - **in one line without using** if-else;
-  - using guards.
-
-- whether a whole number *x* is between two whole numbers - *start* and *end*:
-  - **in one line without** using if-else;
-  - with a local helper procedure that uses boolean operators.
-
-Test cases:
-
-```scheme
-(equal? (are-not-equal-one-line? 5 2) #t)
-(equal? (are-not-equal-one-line? 5 5) #f)
-
-(equal? (are-not-equal-guards? 5 2) #t)
-(equal? (are-not-equal-guards? 5 5) #f)
-
-(equal? (inside-one-line? 1 5 4) #t) ; start = 1, end = 5, x = 4
-(equal? (inside-one-line? 5 1 4) #t)
-(equal? (inside-one-line? 10 50 200) #f)
-(equal? (inside-one-line? 10 50 1) #f)
-
-(equal? (inside-boolean-ops? 1 5 4) #t)
-(equal? (inside-boolean-ops? 5 1 4) #t)
-(equal? (inside-boolean-ops? 10 50 200) #f)
-(equal? (inside-boolean-ops? 10 50 1) #f)
-```
-
-# Task 7
-
-Define two procedures that return whether a number is even:
-
-- using if-else;
-- using guards.
-
-Test cases:
-
-```scheme
-(equal? (is-even-if 2) "Yes")
-(equal? (is-even-if 15452) "Yes")
-(equal? (is-even-if 321) "No")
-
-(equal? (is-even-guards 2) "Yes")
-(equal? (is-even-guards 15452) "Yes")
-(equal? (is-even-guards 321) "No")
-```
-
 # For home
 
 ## Task 0
