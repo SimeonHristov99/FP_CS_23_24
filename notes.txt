@@ -2,10 +2,10 @@
 # Week_01 - Recursion (part 1)
 ###################################################################################################
 
-[ ] If you don't have access to Moodle, write me an email as soon as possible.
-[ ] Walk around the GitHub page.
-    [ ] What is that "For Home" section? (please remind Simo to explain it at the start of the second hour, in case he forgets!!)
-[ ] Yes, homework 3 is going to be during the Christmas holidays.
+[X] If you don't have access to Moodle, write me an email as soon as possible: s.e.hristov99@gmail.com .
+[X] Walk around the GitHub page.
+    [X] What is that "For Home" section? (please remind Simo to explain it at the start of the second hour, in case he forgets!!)
+[X] Yes, homework 3 is going to be during the Christmas holidays.
     Here is a timeline THAT MIGHT CHANGE:
         - homework 1: week 03 (2 programming tasks)
         - homework 2: week 06 (2 programming tasks)
@@ -13,12 +13,12 @@
         - homework 3: week 11 (2 programming tasks)
         - homework 4: week 14 (2 programming tasks)
         - exam 2    : week 15 (8 theoretical questions + 4 programming tasks)
-[ ] Are we changing the hours? Note that there may not be available rooms.
+[X] Are we changing the hours? Note that there may not be available rooms.
     - Monday: I'll be with Mihi and group 4 in the morning. Feel free to come then if more appropriate;
     - Tuesday: after 5 pm;
     - Wednesday: after 6 pm;
-    - Thursday: after 5 pm.
-[ ] During the intermission create a chat in Facebook (FP_CS_23_24)! Remind Simo if he forgets, please 😄!
+    - Thursday: after 5.5 pm.
+[X] During the intermission create a chat in Facebook (FP_CS_23_24)! Remind Simo if he forgets, please 😄!
     Also keep in mind that if you want a fast/timely reply, you ought to send an email.
     I do not log into FB often!!
 
@@ -50,11 +50,11 @@ Comments
 
 The functions in Racket are (formally) called procedures
     What is the difference between a procedure and a method?
-        ???
+        The method is part of a class. It has access to *this.
 
 
 What is a predicate?
-    ???
+    A expression/function/procedure which return true or false.
 
 
 Types of Evaluation Processes
@@ -70,10 +70,10 @@ Types of Evaluation Processes
 
 
 What is a declaration and what is a definition?
-    int add(const int x, const int y)       <-- ???
-    {                                       <-- ???
-        return x + y;                       <-- ???
-    }                                       <-- ???
+    int add(const int x, const int y)       <-- declaration
+    {                                       <-- definition
+        return x + y;                       <-- definition
+    }                                       <-- definition
 
 
 Built-in data types
