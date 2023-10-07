@@ -107,7 +107,7 @@ Test cases:
 
 # For home
 
-## Task 0
+## Task 1
 
 Watch [this](https://www.youtube.com/watch?v=HlgG395PQWw) YouTube video and answer the following questions:
 
@@ -120,7 +120,7 @@ Watch [this](https://www.youtube.com/watch?v=HlgG395PQWw) YouTube video and answ
 7. What is currying?
 8. What are the three core values of being purely functional?
 
-## Task 1
+## Task 2
 
 The Euclidean Algorithm for finding `GCD(x,y)` is as follows:
 
@@ -139,7 +139,7 @@ Test cases:
 (= (my-gcd 13 1235) 13)
 ```
 
-## Task 2
+## Task 3
 
 Define two predicates that check whether a year is a leap year.
 
@@ -179,7 +179,7 @@ Test cases:
 (equal? (is-leap-year-guards? 2100) #f)
 ```
 
-## Task 3
+## Task 4
 
 John has a backpack. With it he can carry *k* kilograms. An item from the supermarket weighs *w* kilograms.
 
@@ -202,7 +202,7 @@ Test cases:
 ; (can-carry? 13 25 -2) ; error: The weight of a product was negative
 ```
 
-## Task 4
+## Task 5
 
 Each **day** a plant is growing by *up-speed* meters. Each **night** that plants height decreases by *down-speed* meters due to the lack of sun light. Initially, plant is 0 meters tall. We plant the seed at the beginning of a day. We want to know how many days it will take for the plant to reach a certain height.
 
@@ -243,7 +243,7 @@ Explanations:
 
         After day 1 --> 10
 
-## Task 5
+## Task 6
 
 A snail crawls up a column. During the day it crawls up some distance. During the night it sleeps, so it slides down for some distance (less than it crawls up during the day).
 
@@ -265,7 +265,7 @@ Test cases:
 (= (snail 5 10 3) 1)
 ```
 
-## Task 6
+## Task 7
 
 Define a procedure that reverses a **non-negative** number by implementing a **linearly iterative process**.
 
