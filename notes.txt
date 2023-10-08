@@ -165,3 +165,35 @@ The hello world procedure:
 |                       |
 |                       |
 Do not forget the parenthesis (procedure <=> parenthesis) !
+
+
+
+###################################################################################################
+# Week_02 - Recursion (part 2)
+###################################################################################################
+
+[ ] Let's try to answer all of the questions we see in emails. 
+
+For home
+	WARNING
+		Getting a “Yes” DOES NOT mean getting a bonus.
+
+Importing libraries:
+    #import ... (in C++) => (require ...) (in Racket)
+	(require math/number-theory) ; API: https://docs.racket-lang.org/math/number-theory.html
+	(require racket/trace) ; see what arguments a procedure gets when it is called
+
+Procedures:
+	(divides? d n): Whether d divides n with remainder=0.
+		(divides? 5 25) -> #t ; How would you implement it? Answer: (zero? (reminder 25 5))
+		(divides? 5 19) -> #f
+		(divides? 10 66) -> #f
+		(divides? 10 100) -> #t
+    (divisor-sum n): The sum of the divisors of a number.
+        (divisor-sum 6) -> 12 (1 + 2 + 3 + 6)
+	(prime? n): Whether n is a prime number.
+	(prime-divisors n): Get a list of all the prime divisors of a number.
+	(even? n): Whether n is an even number.
+	(odd? n): Whether n is an odd number.
+	(factorial n): Get the factorial of a number.
+	(trace <f-name>): See what calculations happen where. VERY USEFUL FOR DEBUGGING!
