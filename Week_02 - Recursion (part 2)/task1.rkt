@@ -9,19 +9,25 @@
 - with a local helper procedure that uses boolean operators. |#
 
 (define (not-equal-one-line? x y)
-  42
+  (not (= x y))
   )
 
 (define (not-equal-guards? x y)
-  42
+  (cond
+    [(= x y) #f]
+    [else #t]
+    )
   )
 
 (define (inside-one-line? start end x)
-  42
+  (<= (min start end) x (max start end))
   )
 
 (define (inside-boolean-ops? start end x)
-  42
+  (and
+   (<= (min start end) x)
+   (<= x (max start end))
+   )
   )
 
 (equal? (not-equal-one-line? 5 2) #t)

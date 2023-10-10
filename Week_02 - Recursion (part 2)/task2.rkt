@@ -7,11 +7,14 @@ Define two procedures that return whether a number is even:
 |#
 
 (define (even-if? n)
-  42
+  (if (zero? (remainder n 2)) "Yes" "No")
   )
 
 (define (even-guards? n)
-  42
+  (cond
+    [(zero? (remainder n 2)) "Yes"]
+    [else "No"]
+    )
   )
 
 (equal? (even-if? 2) "Yes")

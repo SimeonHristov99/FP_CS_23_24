@@ -172,7 +172,7 @@ Do not forget the parenthesis (procedure <=> parenthesis) !
 # Week_02 - Recursion (part 2)
 ###################################################################################################
 
-[ ] Let's try to answer all of the questions we see in emails. 
+[X] Let's try to answer all of the questions we see in emails.
 
 For home
 	WARNING
