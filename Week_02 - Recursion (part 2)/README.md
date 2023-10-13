@@ -244,7 +244,9 @@ Test cases:
 
 ```scheme
 (= (count-occurrences 121 1) 2)
-(= (count-occurrences 20 1) 0)
+(= (count-occurrences 222 1) 0)
+(= (count-occurrences 100 0) 2)
+(= (count-occurrences 0 0) 1)
 ```
 
 ## Task 8
