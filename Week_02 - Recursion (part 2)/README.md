@@ -238,7 +238,7 @@ Test cases:
 
 ## Task 7
 
-Define a procedure that returns the number of occurrences of a digit in a **positive** number.
+Define a procedure that returns the number of occurrences of a digit in a **non-negative** number.
 
 Test cases:
 
