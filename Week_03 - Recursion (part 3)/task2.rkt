@@ -6,7 +6,13 @@ and calculates the following sum: 1 + x + x^2 + x^3 + ... + x^n.
 |#
 
 (define (calculate-sum x n)
-  42
+  (define (helper result power)
+    (if (zero? power)
+        result
+        (helper (+ result (expt x power)) (sub1 power))
+        )
+    )
+  (helper 1 n)
   )
 
 (= (calculate-sum 5 0) 1)

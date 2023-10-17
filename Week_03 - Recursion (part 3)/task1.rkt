@@ -13,14 +13,44 @@ and 1634 (4 digits):
 
 (require racket/trace)
 
+(define (num-digits n)
+  (if (< n 10)
+      1
+      (add1 (num-digits (quotient n 10)))
+      )
+  )
+;(trace num-digits)
+
 (define (narcissistic? n)
-  42
+  (define (narcissistic-sum leftover power)
+    (if (zero? leftover)
+        0
+        (+
+         (expt (remainder leftover 10) power)
+         (narcissistic-sum (quotient leftover 10) power)
+         )
+        )
+    )
+  ;(trace narcissistic-sum)
+  (= n (narcissistic-sum n (num-digits n)))
   )
 
 ; show trace
+
+;(num-digits 123)
 
 (equal? (narcissistic? 7) #t)
 (equal? (narcissistic? 12) #f)
 (equal? (narcissistic? 370) #t)
 (equal? (narcissistic? 371) #t)
 (equal? (narcissistic? 1634) #t)
+
+#|
+(if (< leftover 10)
+        (expt leftover power)
+        (+
+         (expt (remainder leftover 10) power)
+         (narcissistic-sum (quotient leftover 10) power)
+         )
+        )
+|#

@@ -4,8 +4,17 @@
 Define a procedure that finds the maximum digit in a number.
 |#
 
+(require racket/trace)
+
 (define (find-max n)
-  42
+  (define (helper leftover curr-max)
+    (if (zero? leftover)
+      curr-max
+      (helper (quotient leftover 10) (max curr-max (remainder leftover 10)))
+      )
+    )
+  (trace helper)
+  (helper (quotient n 10) (remainder n 10))
   )
 
 (= (find-max 55345) 5)
