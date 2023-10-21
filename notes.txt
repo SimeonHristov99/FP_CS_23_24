@@ -208,3 +208,66 @@ Procedures:
 [X] Test 2: 13.01.2024 (Saturday), 12 pm - 4 pm (part 1: 4 programming tasks, part 2: (usually) 8 theoretical questions).
 
 
+
+###################################################################################################
+# Week_04 - Lambda Expressions
+###################################################################################################
+
+General
+	procedures without a name (anonymous)
+		called "arrow functions" in JS, TS, etc (Frontend Languages and Frameworks)
+		in 💓 Python3 💓 : lambda x : x + 1
+		in    C++        : [](const int x) { return x + 1; } (if interested: https://www.youtube.com/watch?v=mWgmBBz0y8c)
+		in    Racket     : (λ (x) (add1 x))
+		in    Haskell    : (\ x -> x + 1)
+
+	have four parts
+		brackets
+		the lambda symbol ; in DrRacket use Cntr + \ or lambda
+		sequence of parameters (separated by SPACE)
+		a procedure to be executed over those parameters
+	    	(λ (<parameters>) (<procedure>))
+
+	a lambda that adds 5 to a number: ???
+		how would a test look like? ???
+
+	a lambda-predicate that checks whether a number is greater than 10: ???
+		how would a test look like? ???
+
+	a lambda which adds three numbers: ???
+		how would a test look like? ???
+
+	What is an unary procedure? ???
+		examples: ???
+	
+    What is a binary procedure? ???
+		examples: ???
+
+Function Composition
+	Composition of f and g over x: ???
+	We did it last time. Can you tell me which task it was?
+        ???
+
+Partial Application
+	1. Take an n-argument procedure f (n > 1).
+	2. Apply it to m arguments (m < n).
+	3. Return a procedure that takes (n - m) arguments.
+	Done! You have just applied f partially to m arguments. The result is a procedure!!
+    Currying:
+        When you keep applying f only to m=1 arguments until all of them are supplied.
+
+Higher order procedure
+	A procedure that accepts at least one procedure as a parameter and/or returns a procedure.
+    Procedures can be passed to other procedures just like a normal type (numbers, strings, vectors, arrays, etc.).
+        That is why they are called "first class citizens" in JS.
+
+What will the following produce?
+	((λ (x y z) (string-append x y z)) "This" " is " "Racket!")
+	((λ (x y z) (x y z)) (λ (x y) (+ x y)) 5 6)
+
+Applicative and normal order evaluation
+    In applicative order execution, all procedure arguments are evaluated before applying the procedure. In normal order execution, procedure arguments are evaluated after applying the procedure, and then only if the result is needed to complete the evaluation of the procedure.
+
+    What type of evaluation does C++ have?
+    What type of evaluation does Racket have?
+    What type of evaluation does Haskell have?
