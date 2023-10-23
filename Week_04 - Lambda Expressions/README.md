@@ -94,7 +94,7 @@ If g is upper-bound (λ (x) (* 2 x)) 30
 
 ## Task 2
 
-Define a linearly recursive procedure *repeater str* that accepts a string and returns a procedure of two arguments - *count* (number) and *glue* (string). The result from a call to *repeater* should be a string that is *str* repeated *count* times with *glue* being put between every two *str* instances.
+Define a higher order procedure *repeater str* that accepts a string and returns a linearly recursive procedure of two arguments - *count* (number) and *glue* (string). The result from a call to *repeater* should be a string that is *str* repeated *count* times with *glue* being put between every two *str* instances.
 
 Test cases:
 
