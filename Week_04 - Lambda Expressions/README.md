@@ -120,7 +120,7 @@ Explanation for test case 1:
 We apply 2 * x first to 2, then to (2 * 2) and so on. Thus, we get: (((((2 * 2) * 2) * 2) * 2) * 2) => ((((4 * 2) * 2) * 2) * 2) => (((8 * 2) * 2) * 2) => ((16 * 2) * 2) => (32 * 2) => 64
 ```
 
-# Task 4
+## Task 4
 
 Define the procedure *derive-n f n eps* that returns the n<sup>th</sup> order derivative of an unary procedure *f* with precision *eps*.
 
@@ -130,7 +130,7 @@ Test case:
 (= ((derive-n (λ (x) (* 2 x x x)) 3 1e-3) 2) 12.000015203739167)
 ```
 
-# Task 5
+## Task 5
 
 Define the procedures *derive-x f eps* and *derive-y f eps* that correspondingly return the first order derivative of a binary procedure *f* with precision *eps*.
 
