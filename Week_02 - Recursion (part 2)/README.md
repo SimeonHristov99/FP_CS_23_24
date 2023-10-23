@@ -7,8 +7,8 @@ Define predicates that check:
   - using guards.
 
 - whether a whole number *x* is between two whole numbers - *start* and *end*:
-  - **in one line without** using if-else;
-  - with a local helper procedure that uses boolean operators.
+  - **in one line without** using if-else and boolean operators;
+  - **in one line** using boolean operators
 
 Test cases:
 
