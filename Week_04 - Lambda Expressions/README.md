@@ -68,6 +68,17 @@ Test cases:
 (= ((switch-sum (λ (x) (+ x 1)) (λ (x) (* x 2)) 4) 2) 30)
 ```
 
+# Task 5
+
+Define a higher order procedure *repeater str* that accepts a string and returns a linearly recursive procedure of two arguments - *count* (number) and *glue* (string). The result from a call to the result of *repeater* should be a string that is *str* repeated *count* times with *glue* being put between every two *str* instances.
+
+Test cases:
+
+```lisp
+(equal? ((repeater "I love Racket") 3 " ") "I love Racket I love Racket I love Racket")
+(equal? ((repeater "Quack") 5 "!") "Quack!Quack!Quack!Quack!Quack")
+```
+
 # For home
 
 ## Task 1
@@ -94,17 +105,6 @@ If g is upper-bound (λ (x) (* 2 x)) 30
 
 ## Task 2
 
-Define a higher order procedure *repeater str* that accepts a string and returns a linearly recursive procedure of two arguments - *count* (number) and *glue* (string). The result from a call to the result of *repeater* should be a string that is *str* repeated *count* times with *glue* being put between every two *str* instances.
-
-Test cases:
-
-```lisp
-(equal? ((repeater "I love Racket") 3 " ") "I love Racket I love Racket I love Racket")
-(equal? ((repeater "Quack") 5 "!") "Quack!Quack!Quack!Quack!Quack")
-```
-
-## Task 3
-
 Define a procedure that takes a single argument procedure and returns it applied n times.
 
 Test cases:
@@ -120,7 +120,7 @@ Explanation for test case 1:
 We apply 2 * x first to 2, then to (2 * 2) and so on. Thus, we get: (((((2 * 2) * 2) * 2) * 2) * 2) => ((((4 * 2) * 2) * 2) * 2) => (((8 * 2) * 2) * 2) => ((16 * 2) * 2) => (32 * 2) => 64
 ```
 
-## Task 4
+## Task 3
 
 Define the procedure *derive-n f n eps* that returns the n<sup>th</sup> order derivative of an unary procedure *f* with precision *eps*.
 
@@ -130,7 +130,7 @@ Test case:
 (= ((derive-n (λ (x) (* 2 x x x)) 3 1e-3) 2) 12.000015203739167)
 ```
 
-## Task 5
+## Task 4
 
 Define the procedures *derive-x f eps* and *derive-y f eps* that correspondingly return the first order derivative of a binary procedure *f* with precision *eps*.
 
