@@ -3,20 +3,33 @@
 ; Define a procedure that returns the smallest element of a list.
 
 (define (get-smallest-rec xs)
-  42
+  (define (helper current-min leftover)
+    (if (null? leftover)
+        current-min
+        (helper (min (car leftover) current-min) (cdr leftover))
+      )
+    )
+  (if (null? xs)
+      (error "Empty list!")
+      (helper (car xs) (cdr xs))
+      )
   )
 
 (define (get-smallest-proc xs)
-  42
+  (apply min xs)
   )
 
 (define (get-smallest-fold-proc xs)
-  42
+  (foldr min (car xs) (cdr xs))
   )
 
 (define (get-smallest-fold-no-proc xs)
-  42
+  (foldr (λ (x y) (if (< x y) x y)) (car xs) (cdr xs))
   )
+
+;acc=1
+;leftover='(2 5)
+
 
 ; using a recursive procedure
 (= (get-smallest-rec '(1 2 5)) 1)

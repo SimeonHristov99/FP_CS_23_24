@@ -1,14 +1,25 @@
 #lang racket
 
-; Define a procedure that removes the first match of an element by going from left to right.
+; Define a procedure that removes
+; the first match of an element by going from left to right.
 
 (define (remove-first-proc x xs)
-  42
+  (remove x xs)
   )
 
 (define (remove-first-no-proc x xs)
-  42
+  (cond
+    [(null? xs) xs]
+    [(equal? x (car xs)) (cdr xs)]
+    [else (cons (car xs) (remove-first-no-proc x (cdr xs)))]
+    )
   )
+
+;1 '(2 5 1 6)
+;1 '(5 1 6)
+;1 '(1 6)
+;'(6)
+
 
 ; using a predefined procedure
 (equal? (remove-first-proc 1 '(1 1 1 2)) '(1 1 2))

@@ -3,15 +3,25 @@
 ; Define a procedure that checks whether an element is present in a list.
 
 (define (elem-rec-with-mc? x xs)
-  42
+  (cond
+    [(null? xs) #f]
+    [(equal? x (car xs)) #t]
+    [else (elem-rec-with-mc? x (cdr xs))]
+    )
   )
 
 (define (elem-rec-without-mc? x xs)
-  42
+  (and
+   (not (null? xs))
+   (or
+    (equal? x (car xs))
+    (elem-rec-without-mc? x (cdr xs))
+    )
+   )
   )
 
 (define (elem-proc? x xs)
-  42
+  (list? (member x xs))
   )
 
 ; using a manual check
