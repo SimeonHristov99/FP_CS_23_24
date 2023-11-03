@@ -153,8 +153,6 @@ Test cases:
 
 Define a recursive and an iterative procedure for calculating the number of digits of a `non-negative` number.
 
-> **Implementation detail**: Use guards!
-
 Test cases:
 
 ```scheme
