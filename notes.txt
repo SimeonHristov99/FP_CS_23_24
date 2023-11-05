@@ -432,6 +432,7 @@ Built-in procedures
 
 
 [ ] Move the hour on 02.01.2024 to December?
+[ ] Sample theoretical exam in Moodle along with practice tasks.
 
 
 Pairs and association lists

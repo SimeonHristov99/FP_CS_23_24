@@ -68,7 +68,7 @@ Test cases:
 
 # Next tasks
 
-Start solving  `exam1_21_22.pdf` in reverse.
+Start solving  `exam1_22_23.pdf` in reverse.
 
 # For home
 
