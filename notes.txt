@@ -431,8 +431,8 @@ Built-in procedures
 ###################################################################################################
 
 
-[ ] Move the hour on 02.01.2024 to December?
-[ ] Sample theoretical exam in Moodle along with practice tasks.
+[X] Move the hour on 02.01.2024 to December?
+[X] Sample theoretical exam in Moodle along with practice tasks.
 
 
 Pairs and association lists
@@ -476,7 +476,7 @@ Higher order functions for lists
 		(take '(1 2 3 4) 2) ; -> '(1 2)
 		(take '(1 2 3 4) 5) ; -> error
 
-	(takef xs pred) ; return a list whose elements are taken successively from xs as long as they satisfy pred. The returned list includes up to, but not including, the first element in xs for which pred returns #f.
+	(takef xs pred?) ; return a list whose elements are taken successively from xs as long as they satisfy pred. The returned list includes up to, but not including, the first element in xs for which pred returns #f.
 	(takef '(2 4 5 8) even?) ; -> '(2 4)
 	(takef '(2 4 6 8) odd?)  ; -> '()
 
@@ -485,5 +485,5 @@ Higher order functions for lists
 		(drop '(1 2 3 4) 2) -> '(3 4)'
 		(drop '(1 2 3 4) 5) -> error
 
-	(dropf xs pred) ; remove elements in xs as long as they satisfy pred
+	(dropf xs pred?) ; remove elements in xs as long as they satisfy pred
 		(dropf '(2 2 4 8 56) even?) -> '()

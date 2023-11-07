@@ -1,9 +1,15 @@
 #lang racket
 
-; Define a procedure that counts how many times a list is present in another list.
+; Define a procedure that counts how
+; many times a list is present in another list.
 
 (define (count-occurrences xs ys)
-  42
+  (cond
+    [(< (length ys) (length xs)) 0]
+    [(equal? (take ys (length xs)) xs)
+     (add1 (count-occurrences xs (cdr ys)))]
+    [else (count-occurrences xs (cdr ys))]
+    )
   )
 
 (= (count-occurrences '(6 6) '(2 2)) 0)
