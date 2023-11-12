@@ -430,15 +430,19 @@ Built-in procedures
 # Week_06 - Pairs. Association Lists
 ###################################################################################################
 
-
 [ ] Move the hour on 01.01.2024 to December?
 [ ] Sample theoretical exam in Moodle along with practice tasks.
 
-Test 1
-	[ ] Task 1: Lists + Recursion.
-	[ ] Task 2: Lists + HOP.
-	[ ] Task 3: Lists + HOP.
-	[ ] Task 4: Lists + HOP.
+
+[ ] Test 1
+	- Task 1: Lists + Recursion.
+	- Task 2: Lists + HOP.
+	- Task 3: Lists + HOP.
+	- Task 4: Lists + HOP.
+
+
+[ ] Next time we'll be using Haskell. I'll post in Moodle another message with installation instructions.
+
 
 Pairs and association lists
 	Pairs
@@ -492,3 +496,17 @@ Higher order functions for lists
 
 	(dropf xs pred?) ; remove elements in xs as long as they satisfy pred
 		(dropf '(2 2 4 8 56) even?) -> '()
+
+
+
+###################################################################################################
+# Week_07 - Preparation for Test 1
+###################################################################################################
+
+[ ] Test 1
+	- Task 1: Lists + Recursion.
+	- Task 2: Lists + HOP.
+	- Task 3: Lists + HOP.
+	- Task 4: Lists + HOP.
+
+[ ] Next time we'll be using Haskell. I'll post in Moodle another message with installation instructions.
