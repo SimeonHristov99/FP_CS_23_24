@@ -431,9 +431,14 @@ Built-in procedures
 ###################################################################################################
 
 
-[X] Move the hour on 02.01.2024 to December?
-[X] Sample theoretical exam in Moodle along with practice tasks.
+[ ] Move the hour on 01.01.2024 to December?
+[ ] Sample theoretical exam in Moodle along with practice tasks.
 
+Test 1
+	[ ] Task 1: Lists + Recursion.
+	[ ] Task 2: Lists + HOP.
+	[ ] Task 3: Lists + HOP.
+	[ ] Task 4: Lists + HOP.
 
 Pairs and association lists
 	Pairs
