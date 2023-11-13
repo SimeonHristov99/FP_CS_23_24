@@ -4,7 +4,11 @@
 ; many times a list is present in another list.
 
 (define (count-occurrences xs ys)
-  42
+  (cond
+    [(> (length xs) (length ys)) 0]
+    [(equal? xs (take ys (length xs))) (add1 (count-occurrences xs (cdr ys)))]
+    [else (count-occurrences xs (cdr ys))]
+    )
   )
 
 (= (count-occurrences '(6 6) '(2 2)) 0)

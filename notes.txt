@@ -430,18 +430,18 @@ Built-in procedures
 # Week_06 - Pairs. Association Lists
 ###################################################################################################
 
-[ ] Move the hour on 01.01.2024 to December?
-[ ] Sample theoretical exam in Moodle along with practice tasks.
+[X] Move the hour on 01.01.2024 to December? Ok. Place poll.
+[X] Sample theoretical exam in Moodle along with practice tasks.
 
 
-[ ] Test 1
+[X] Test 1
 	- Task 1: Lists + Recursion.
 	- Task 2: Lists + HOP.
 	- Task 3: Lists + HOP.
 	- Task 4: Lists + HOP.
 
 
-[ ] Next time we'll be using Haskell. I'll post in Moodle another message with installation instructions.
+[X] Next time we'll be using Haskell. I'll post in Moodle another message with installation instructions.
 
 
 Pairs and association lists

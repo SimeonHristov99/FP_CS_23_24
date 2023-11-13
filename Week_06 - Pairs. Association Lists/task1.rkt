@@ -4,15 +4,31 @@
 ; the value of a given key from an associative list.
 
 (define (assoc-rec key xs)
-  42
+  (cond
+    [(null? xs) #f]
+    [(equal? key (caar xs)) (cdar xs)]
+    [else (assoc-rec key (cdr xs))]
+    )
   )
 
 (define (assoc-hop key xs)
-  42
+  (let
+      ([filter-res (filter (λ (x) (equal? key (car x))) xs)])
+    (if (null? filter-res)
+        #f
+        (cdar filter-res)
+        )
+      )
   )
 
 (define (assoc-builtin key xs)
-  42
+  (let
+      ([assoc-res (assoc key xs)])
+    (if assoc-res
+        (cdr assoc-res)
+        #f
+        )
+      )
   )
 
 ; using a recursive process
