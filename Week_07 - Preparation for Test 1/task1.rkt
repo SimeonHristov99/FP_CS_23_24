@@ -4,7 +4,11 @@
 ; and returns a list containing only one level with all the elements from all lists.
 
 (define (my-flatten xss)
-  42
+  (cond
+    [(null? xss) null]
+    [(not (list? (car xss))) (cons (car xss) (my-flatten (cdr xss)))]
+    [else (append (my-flatten (car xss)) (my-flatten (cdr xss)))]
+    )
   )
 
 (equal? (my-flatten '((1 2 3) (4 5 6) ((7 8) (9 10 (11 (12)))))) '(1 2 3 4 5 6 7 8 9 10 11 12))

@@ -5,8 +5,20 @@
 ; in order to reach x.
 ; Define a procedure that removes all atoms that are smaller than their depth.
 
+(require racket/trace)
+
 (define (deep-delete xss)
-  42
+  (define (helper depth leftover-xss)
+    (cond
+      [(null? leftover-xss) null]
+      [(list? (car leftover-xss)) (append
+                                   (list (helper (add1 depth) (car leftover-xss)))
+                                   (helper depth (cdr leftover-xss)))]
+      [(< (car leftover-xss) depth) (helper depth (cdr leftover-xss))]
+      [else (cons (car leftover-xss) (helper depth (cdr leftover-xss)))]
+      )
+    )
+  (helper 1 xss)
   )
 
 ; can reach "1" by applying "car" one time and "2" can be reached with "caadr".

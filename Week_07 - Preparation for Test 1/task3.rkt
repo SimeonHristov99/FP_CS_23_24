@@ -5,7 +5,7 @@
 ; and returns whether all points are part of the graph of the function.
 
 (define (graph-contains-points ps f)
-  42
+  (andmap (λ (pair) (equal? (f (car pair)) (cdr pair))) ps)
   )
 
 (equal? (graph-contains-points '((1 . 2) (2 . 3) (3 . 4)) add1) #t)
