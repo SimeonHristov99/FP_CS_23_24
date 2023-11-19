@@ -9,13 +9,29 @@
 5. What is the return type?
 6. Break the task into smaller tasks. List them.
 
-## In case of an error
+## In case of an error in Haskell
+
+- check whitespace (space, tab, etc.)
+- remove/comment out declaration
+- new algorithm
+
+## In case of an error in Racket
 
 - check procedure application => should be prefix
 - procedure <=> parenthesis
 - new algorithm
 
-## Resources
+## Resources for Haskell
+
+- [HASKELL IN 100 SECONDS](https://youtu.be/Qa8IfEeBJqk)
+- [Youtube channel (beginner to advanced)](https://www.youtube.com/channel/UC3xdLFFsqG701QAyGJIPT1g/videos)
+- [Book](http://learnyouahaskell.com/chapters) (read chapters [1 .. 8])
+- [Library for working with lists (Data.List)](https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-List.html)
+- [Library for working with characters/digits (Data.Char)](https://hackage.haskell.org/package/base-4.12.0.0/docs/Data-Char.html)
+- [Youtube channel (advanced)](https://www.youtube.com/c/Tsoding/videos)
+- [Learn Haskell in 1 hour](https://www.youtube.com/watch?v=02_H3LjqMr8)
+
+## Resources for Racket
 
 - [Pure code, no bugs](https://www.youtube.com/watch?v=HlgG395PQWw)
 - [Introduction to Racket and Dr. Racket](https://www.youtube.com/playlist?list=PLXaqTeMx01E_eK1ZEpKvKL5KwSaj7cJW9)
