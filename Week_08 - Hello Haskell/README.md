@@ -47,6 +47,39 @@ print $ roundTwoDigButWithMagic 3.1413465345321 == 3.14 -- partial function appl
 
 # Task 2
 
+Define a recursive and an iterative function for calculating the factorial of a non-negative number.
+
+- solve with a linearly recursive process;
+- solve using a linearly iterative process.
+- solve with lists assuming correct input;
+
+Test cases:
+
+```haskell
+print $ factRec 11 == 39916800
+--print $ factRec (-11) -- error: x was negative
+print $ factIter 11 == 39916800
+--print $ factIter (-11) -- error: x was negative
+print $ factXs 11 == 39916800
+```
+
+# Task 3
+
+Define a recursive and an iterative function for calculating the number at index *i* in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...).
+
+> **Note**: Assume correct input.
+
+Test cases:
+
+```haskell
+print $ fibRec 11 == 89
+
+print $ fibIter 11 == 89
+print $ fibIter 110 == 43566776258854844738105
+```
+
+# Task 4
+
 Define a predicate *isInside start end x* that checks whether a number *x* is in an interval [*start*, *end*].
 
 - solve with boolean expressions;
@@ -67,39 +100,6 @@ print $ isInsideLists 10 50 1 == False
 print $ (isInsideLambda 5 1) 4 == True
 print $ (isInsideLambda 10 50) 20 == True
 print $ (isInsideLambda 10 50) 1 == False
-```
-
-# Task 3
-
-Define a recursive and an iterative function for calculating the factorial of a non-negative number.
-
-- solve with a linearly recursive process;
-- solve using a linearly iterative process.
-- solve with lists assuming correct input;
-
-Test cases:
-
-```haskell
-print $ factRec 11 == 39916800
---print $ factRec (-11) -- error: x was negative
-print $ factIter 11 == 39916800
---print $ factIter (-11) -- error: x was negative
-print $ factXs 11 == 39916800
-```
-
-# Task 4
-
-Define a recursive and an iterative function for calculating the number at index *i* in the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...).
-
-> **Note**: Assume correct input.
-
-Test cases:
-
-```haskell
-print $ fibRec 11 == 89
-
-print $ fibIter 11 == 89
-print $ fibIter 110 == 43566776258854844738105
 ```
 
 # For home

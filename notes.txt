@@ -564,12 +564,12 @@ Types
 				use only "/" (equivalent to "/" in C++, but here it cannot be used for whole numbers)
 
 		power
-			use n ^ m  when m is a natural number (i.e. m > 0) (ex. 2 ^ 3 == 8)
-			use n ** m when m is a floating-point number (ex. 2 ** 0.5 == 1.4142135623730951)
+			use n^m  when m is a natural number (i.e. m > 0) (ex. 2^3 == 8)
+			use n**m when m is a floating-point number (ex. 2**0.5 == 1.4142135623730951)
 
 		other: min, max, odd, even, gcd, abs, sqrt (sqrt 2 == 1.4142135623730951; sqrt :: Double -> Double)
 
-		❗❗❗ Int => Double: fromIntegral           (ex. if a is 5, then (fromIntegral a) is 5.0)  ❗❗❗
+		❗❗❗ Int => Double: fromIntegral           (ex. if x is 5, then (fromIntegral x) is 5.0)  ❗❗❗
 		❗❗❗ Double => Int: ceiling, floor, round, truncate  (ex. round 5.45 == 5)                ❗❗❗
 		❗❗❗ != (C++) => /= (Haskell)              (ex. 5 /= 5 is False; True /= False is True)   ❗❗❗
 
@@ -648,7 +648,7 @@ Types
 
 		- the ith element
 			- xs!!5 => The element at INDEX 5 (ex. [1, 2, 3, 4, 5, 6]!!5 == 6)
-			- [1 .. 5] !! 3 = 4
+			- [1 .. 5]!!3 = 4
 
 		- last element
 			- last [1, 2, 3, 4] => 4
@@ -723,11 +723,11 @@ Types
 		- (\ <parameters> -> <function application>)
 
 	- a lambda that adds 5 to a number:
-		???
+		(\ x -> x + 5)
 	- a lambda-predicate that checks whether a number is greater than 10:
-		???
+		(\ x -> x > 10)
 	- a lambda which adds three numbers:
-		???
+		(\ x y z -> x + y + z)
 
 
 	################################################################################
