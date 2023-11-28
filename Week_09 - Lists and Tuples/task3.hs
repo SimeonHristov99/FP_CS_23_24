@@ -14,4 +14,23 @@ main = do
     print $ getPalindromesHOF 21612 == 21614
     print $ getPalindromesHOF 26362 == 26364
 
+rev :: Int -> Int
+rev = read . reverse . show
 
+isPalindrome :: Int -> Bool
+isPalindrome n = n == rev n
+
+getPalindromesHOF :: Int -> Int
+getPalindromesHOF n = head validNums + last validNums
+ where
+    validNums = filter (\ x -> mod n x == 0 && isPalindrome x) [2 .. n]
+
+getPalindromesLCLet :: Int -> Int
+getPalindromesLCLet n =
+    let validNums = [x | x <- [2 .. n], mod n x == 0 && isPalindrome x]
+    in head validNums + last validNums
+
+getPalindromesLC :: Int -> Int
+getPalindromesLC n = head validNums + last validNums
+ where
+    validNums = [x | x <- [2 .. n], mod n x == 0 && isPalindrome x]
