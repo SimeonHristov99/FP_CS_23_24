@@ -247,7 +247,7 @@ divideRats - returns the quotient of two rational numbers
 areEqual - returns whether two rational numbers are equal
 ```
 
-> **Implementation detail**: Use type annotations!
+> **Implementation detail**: Use type annotations (i.e. type classes)!
 
 Test cases:
 
