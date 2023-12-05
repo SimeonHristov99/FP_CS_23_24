@@ -1,5 +1,6 @@
 {-
-Using type classes, pattern matching and no built-in functions define a function that:
+Using type classes, pattern matching
+and no built-in functions define a function that:
     - checks whether a list is empty;
     - returns the first element of a list;
     - removes the first element of a list;
@@ -9,6 +10,8 @@ Using type classes, pattern matching and no built-in functions define a function
     - solve with pattern matching;
     - solve with folding.
 -}
+
+
 
 main :: IO()
 main = do
@@ -37,4 +40,31 @@ main = do
     print $ joinFold [[1, 2], [5, 6], [9]] == [1, 2, 5, 6, 9]
     print $ joinFold [['H'], ['a', 's'], "kell"] == "Haskell"
 
+joinFold :: [[a]] -> [a]
+joinFold = foldl (++) []
+
+join :: [[a]] -> [a]
+join [] = []
+join (xs:xss) = xs ++ join xss
+
+concatenate :: [a] -> [a] -> [a]
+concatenate [] rs = rs
+concatenate (x:xs) rs = x : concatenate xs rs
+
+isNull :: [a] -> Bool
+isNull [] = True
+isNull _ = False
+
+firstEl :: [a] -> a
+firstEl [] = error "Empty list"
+firstEl (x:_) = x
+
+removeFirst :: [a] -> [a]
+removeFirst [] = error "Empty list"
+removeFirst (_:xs) = xs
+
+fromXs :: Int -> [a] -> [a]
+fromXs 0 xs = xs
+fromXs _ [] = []
+fromXs n (x:xs) = fromXs (n - 1) xs
 
