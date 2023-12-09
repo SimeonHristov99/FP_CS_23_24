@@ -1,0 +1,1 @@
+-- Read the contents of the `sample.txt` text file with Haskell.
