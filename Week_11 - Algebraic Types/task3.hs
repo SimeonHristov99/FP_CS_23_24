@@ -36,4 +36,35 @@ main = do
     print $ is2D (Triangle 5.3 3.9 4.89) == True
     print $ is2D (Cylinder 20 30) == False
 
+data Shape a = Circle a | Rectangle a a | Triangle a a a | Cylinder a a
+ deriving (Show, Eq, Ord, Read)
 
+is2D :: Shape a -> Bool
+is2D (Cylinder _ _) = False
+is2D _ = True
+
+isRound :: Shape a -> Bool
+isRound (Circle _) = True
+isRound (Cylinder _ _) = True
+isRound _ = False
+
+area :: (Num a, Floating a) => Shape a -> a
+area (Circle r) = pi * r * r
+area (Rectangle x y) = x * y
+area (Triangle x y z) = let halfP = (x + y + z) / 2
+    in sqrt $ halfP * (halfP - x) * (halfP - y) * (halfP - z)
+area (Cylinder r h) = 2 * pi * r * h + 2 * pi * r * r
+
+areaWhere :: (Num a, Floating a) => Shape a -> a
+areaWhere (Circle r) = pi * r * r
+areaWhere (Rectangle x y) = x * y
+areaWhere (Triangle x y z) = sqrt $ halfP * (halfP - x) * (halfP - y) * (halfP - z)
+ where
+    halfP = (x + y + z) / 2
+areaWhere (Cylinder r h) = 2 * pi * r * h + 2 * pi * r * r
+
+perimeter :: (Num a, Floating a) => Shape a -> a
+perimeter (Circle r) = 2 * pi * r
+perimeter (Rectangle x y) = 2 * x + 2 * y
+perimeter (Triangle x y z) = x + y + z
+perimeter (Cylinder r h) = 4 * r + 2 * h
