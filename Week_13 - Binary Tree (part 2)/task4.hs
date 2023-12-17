@@ -7,7 +7,6 @@ main = do
 
 
 data BTree = Nil | Node Char BTree BTree
- deriving (Show, Eq)
 
 t1 :: BTree
 t1 = Node 'a' (Node 'c' (Node 'f' Nil Nil) (Node 'd' Nil Nil)) (Node 'b' Nil (Node 'e' Nil Nil))

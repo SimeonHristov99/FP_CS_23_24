@@ -12,12 +12,14 @@ Define a recursive polymorphic algebraic type called *BTree*. Create the followi
 
 Define the following functions:
 
-    ​​size - returns the number of nodes;
-    sumTree - returns the sum of the nodes (should work only for trees that store numbers in their nodes);​
-    traverseDFS​ - prints the nodes using DFS;
-    getLevel - accepts a whole number k and returns the nodes at level k (root is at level 0);
-    traverseBFS - prints the nodes using BFS;
-    mapTree - maps an unary function to the tree.
+```text
+​​size - returns the number of nodes;
+sumTree - returns the sum of the nodes (should work only for trees that store numbers in their nodes);​
+traverseDFS​ - prints the nodes using DFS;
+getLevel - accepts a whole number k and returns the nodes at level k (root is at level 0);
+traverseBFS - prints the nodes using BFS;
+mapTree - maps an unary function to the tree.
+```
 
 Test cases:
 
@@ -56,14 +58,16 @@ Given a list of unique whole numbers construct a *maximum binary tree*. A binary
 
 Test case:
 
-    t:
-           6
-        /     \
-       3       5
-       \       /
-        2    0
-         \
-          1
+```text
+t:
+     6
+   /   \
+  3     5
+  \    /
+   2  0
+    \
+     1
+```
 
 ```haskell
 print $ constructMaxBTree [3, 2, 1, 6, 0, 5] == t
@@ -75,10 +79,12 @@ For the following tree complete the actions below:
 
 ![Alt text](assets/task3.png?raw=true "task3.png")
 
-    - print it;
-    - define a function that:
-        - returns its size;
-        - returns the elements at level k.
+```text
+- print it;
+- define a function that:
+    - returns its size;
+    - returns the elements at level k.
+```
 
 Test cases:
 
@@ -90,7 +96,9 @@ print $ getLevel t 3 == [1, 2]
 
 Tree:
 
-    t = Node 10 [Node 3 [Node 5 [Nil], Node 8 [Node 1 [Nil], Node 2 [Nil]], Node 9 [Nil]], Node 7 [Node 11 [Nil], Node 13 [Nil]], Node 12 [Node 6 [Nil], Node 4 [Nil]]]
+```haskell
+t = Node 10 [Node 3 [Node 5 [Nil], Node 8 [Node 1 [Nil], Node 2 [Nil]], Node 9 [Nil]], Node 7 [Node 11 [Nil], Node 13 [Nil]], Node 12 [Node 6 [Nil], Node 4 [Nil]]]
+```
 
 # Task 4
 
@@ -107,21 +115,70 @@ print $ isBinarySearchTree t6 == False
 
 Trees used:
 
-    t3 :: BTree
-    t3 = Node 8 (Node 3 (Node 1 Nil Nil) (Node 6 (Node 4 Nil Nil) (Node 7 Nil Nil))) (Node 10 Nil (Node 14 (Node 13 Nil Nil) Nil))
-    
-    t4 :: BTree
-    t4 = Node 8 (Node 3 (Node 5 Nil Nil) (Node 6 Nil Nil)) (Node 10 Nil (Node 14 Nil Nil))
-    
-    t5 :: BTree
-    t5 = Node 8 (Node 3 (Node 2 Nil Nil) (Node 6 Nil Nil)) (Node 10 Nil (Node 1 Nil Nil))
-    
-    t6 :: BTree
-    t6 = Node 8 (Node 3 (Node 1 Nil Nil) (Node 4 Nil Nil)) (Node 10 (Node 5 Nil Nil) Nil)
+```haskell
+t3 :: BTree
+t3 = Node 8 (Node 3 (Node 1 Nil Nil) (Node 6 (Node 4 Nil Nil) (Node 7 Nil Nil))) (Node 10 Nil (Node 14 (Node 13 Nil Nil) Nil))
+
+t4 :: BTree
+t4 = Node 8 (Node 3 (Node 5 Nil Nil) (Node 6 Nil Nil)) (Node 10 Nil (Node 14 Nil Nil))
+
+t5 :: BTree
+t5 = Node 8 (Node 3 (Node 2 Nil Nil) (Node 6 Nil Nil)) (Node 10 Nil (Node 1 Nil Nil))
+
+t6 :: BTree
+t6 = Node 8 (Node 3 (Node 1 Nil Nil) (Node 4 Nil Nil)) (Node 10 (Node 5 Nil Nil) Nil)
+```
 
 # Task 5
 
 ![Alt text](assets/task5.png?raw=true "task5.png")
+
+# Task 6
+
+Let *(x, y, z)* be a vector representing the nodes of a binary tree such that *x* is the value of the current node, *y* and *z* are the values of the child nodes. Define a function that returns the leaves of such a tree.
+
+Test cases:
+
+```haskell
+print $ listLeaves [(1, 2, 3), (2, 4, 5)] == [3, 4, 5]
+print $ listLeaves [(2, 4, 5), (1, 2, 3)] == [4, 5, 3]
+print $ listLeaves [(1, 2, 3), (3, 4, 5), (5, 6, 9)] == [2, 4, 6, 9]
+```
+
+# Task 7
+
+A tree is graceful if the absolute difference between a node and its father is an even number. Define a predicate that returns whether a tree is graceful.
+
+![Alt text](assets/task5_1.png?raw=true "task5_1.png")
+![Alt text](assets/task5_2.png?raw=true "task5_2.png")
+
+Test cases:
+
+```haskell
+print $ isGraceful t1 == True -- t1 = A
+print $ isGraceful t2 == True -- t2 = B
+print $ isGraceful t3 == False -- t3 = C
+```
+
+# Task 8
+
+By using the following types define a function that accepts a list of records and returns the hardest subject, i.e. the subject with the lowest average grade.
+
+Type definitions:
+
+```haskell
+type Student = String
+type Subject = String
+type Note = Double
+type Record = (Student, Subject, Note)
+```
+
+Test cases:
+
+```haskell
+print $ hardestSubject [("John", "Maths", 5), ("Kennedy", "English", 2), ("Joe", "Programming", 4), ("Claudia", "Programming", 6), ("Sam", "Maths", 4), ("Jenn", "English", 2)] == "English"
+print $ hardestSubject [("John", "Maths", 5), ("Kennedy", "English", 5), ("Joe", "Programming", 4), ("Claudia", "Programming", 6), ("Sam", "Maths", 4), ("Jenn", "English", 5)] == "Maths"
+```
 
 # For home
 
@@ -129,12 +186,14 @@ Trees used:
 
 For the trees in task 1 (that we solved in class) define the following functions:
 
-    ​​height - number of nodes along the longest branch;​
-    average - returns the average of the nodes (please change the type of numberBTree to be "(Num a) => BTree a");
-    ​​sumLeaves​ - returns the sum of the leaves;
-    areEqual - checks whether two trees are identical;
-    setLevels - replaces the values in all nodes with the vector ("level", "value");
-    mirrorTree - returns the symmetric tree.
+```text
+​​height - number of nodes along the longest branch;​
+average - returns the average of the nodes (please change the type of numberBTree to be "(Num a) => BTree a");
+​​sumLeaves​ - returns the sum of the leaves;
+areEqual - checks whether two trees are identical;
+setLevels - replaces the values in all nodes with the vector ("level", "value");
+mirrorTree - returns the symmetric tree.
+```
 
 Test cases:
 
@@ -165,8 +224,10 @@ A colour may be either red, green or blue. Create an instance of the following t
 
 ![Alt text](assets/task4.png?raw=true "task4.png")
 
-    - print it;
-    - define a function that accepts a colour and returns the hight of the highest node of that colour.
+```text
+- print it;
+- define a function that accepts a colour and returns the hight of the highest node of that colour.
+```
 
 Test cases:
 
@@ -179,52 +240,19 @@ print $ highest Blue colourBTree == 4
 
 ## Task 3
 
-A tree is graceful if the absolute difference between a node and its father is an even number. Define a predicate that returns whether a tree is graceful.
+The nodes in the following picture resemble the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *subinterval*.
 
-![Alt text](assets/task5_1.png?raw=true "task5_1.png")
-![Alt text](assets/task5_2.png?raw=true "task5_2.png")
+![Alt text](assets/task11_1.png?raw=true "task11_1.png")
+![Alt text](assets/task11_2.png?raw=true "task11_2.png")
 
 Test cases:
 
 ```haskell
-print $ isGraceful t1 == True -- t1 = A
-print $ isGraceful t2 == True -- t2 = B
-print $ isGraceful t3 == False -- t3 = C
+print $ ordered t1 == True
+print $ ordered t2 == False
 ```
 
 ## Task 4
-
-By using the following types define a function that accepts a list of records and returns the hardest subject, i.e. the subject with the lowest average grade.
-
-Type definitions:
-
-```haskell
-type Student = String
-type Subject = String
-type Note = Double
-type Record = (Student, Subject, Note)
-```
-
-Test cases:
-
-```haskell
-print $ hardestSubject [("John", "Maths", 5), ("Kennedy", "English", 2), ("Joe", "Programming", 4), ("Claudia", "Programming", 6), ("Sam", "Maths", 4), ("Jenn", "English", 2)] == "English"
-print $ hardestSubject [("John", "Maths", 5), ("Kennedy", "English", 5), ("Joe", "Programming", 4), ("Claudia", "Programming", 6), ("Sam", "Maths", 4), ("Jenn", "English", 5)] == "Maths"
-```
-
-## Task 5
-
-Let *(x, y, z)* be a vector representing the nodes of a binary tree such that *x* is the value of the current node, *y* and *z* are the values of the child nodes. Define a function that returns the leaves of such a tree.
-
-Test cases:
-
-```haskell
-print $ listLeaves [(1, 2, 3), (2, 4, 5)] == [3, 4, 5]
-print $ listLeaves [(2, 4, 5), (1, 2, 3)] == [4, 5, 3]
-print $ listLeaves [(1, 2, 3), (3, 4, 5), (5, 6, 9)] == [2, 4, 6, 9]
-```
-
-## Task 6
 
 Define a function that accepts a list of whole number one-argument functions *[f<sub>1</sub>, f<sub>2</sub> .. f<sub>n</sub>]* and returns a function that for every *x* calculates the composition of the functions **with odd indices**: *f<sub>1</sub>(f<sub>3</sub>(...(f<sub>n</sub>x)...))*.
 
@@ -236,25 +264,13 @@ Test case:
 print $ (getOddCompositionValue [(\x -> x + 1),(\x -> x * 2),(\x -> x - 1), (\x -> div x 2)]) 2 == 2
 ```
 
-## Task 7
+## Task 5
 
 Define a function that accepts an infinite list of numbers *[x<sub>1</sub>, x<sub>2</sub> .. ]* and returns a function that for every *x* and *y* calculates the expression *(x - x<sub>1</sub>) (x - x<sub>2</sub>) .. (x - x<sub>y</sub>)*.
 
 Test case:
 
-    If g is myPoly [2.7, 3.0 ..]
-        then g 2.2 3 -> -0.4399999999999998
-
-## Task 8
-
-The nodes in the following picture resemble the lower and higher bounds of an interval (the first number will always be lower than the second). Define a function that checks whether such a binary tree is ordered according to the relation *subinterval*.
-
-![Alt text](assets/task11_1.png?raw=true "task11_1.png")
-![Alt text](assets/task11_2.png?raw=true "task11_2.png")
-
-Test cases:
-
-```haskell
-print $ ordered t1 == True
-print $ ordered t2 == False
+```text
+If g is myPoly [2.7, 3.0 ..]
+    then g 2.2 3 -> -0.4399999999999998
 ```
