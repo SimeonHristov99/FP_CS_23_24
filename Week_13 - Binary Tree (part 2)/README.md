@@ -64,7 +64,7 @@ t3 = Node 'a' (Node 'b' (Node 'd' (Node 'h' Nil Nil) (Node 'i' Nil Nil)) (Node '
 
 # Task 3
 
-Define a function that returns all possible word combinations from a binary tree made up of characters.
+Define a function that returns all possible word combinations from a binary tree made up of unique characters.
 
 Test cases:
 
