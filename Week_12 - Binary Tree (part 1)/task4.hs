@@ -1,3 +1,5 @@
+import Data.List
+
 main :: IO()
 main = do
     print $ isBinarySearchTree t3 == True
@@ -5,7 +7,17 @@ main = do
     print $ isBinarySearchTree t5 == False
     print $ isBinarySearchTree t6 == False
 
+data BTree = Nil | Node Int BTree BTree
+ deriving (Show, Eq)
 
+traverseDFS :: BTree -> [Int]
+traverseDFS Nil = []
+traverseDFS (Node value left right) = traverseDFS left ++ [value] ++ traverseDFS right
+
+isBinarySearchTree :: BTree -> Bool
+isBinarySearchTree tree = nodes == sort nodes
+ where
+    nodes = traverseDFS tree
 
 
 

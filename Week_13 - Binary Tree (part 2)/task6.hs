@@ -1,3 +1,5 @@
+import Data.Char
+
 main :: IO()
 main = do
     print $ solve ["abode","ABc","xyzD"]                      == [4,3,1]
@@ -5,4 +7,5 @@ main = do
     print $ solve ["IAMDEFANDJKL","thedefgh","xyzDEFghijabc"] == [6,5,7]
     print $ solve ["encode","abc","xyzD","ABmD"]              == [1, 3, 1, 3]
 
-
+solve :: [String] -> [Int]
+solve = map (length . filter (==True) . zipWith (==) ['a' .. 'z'] . map toLower)

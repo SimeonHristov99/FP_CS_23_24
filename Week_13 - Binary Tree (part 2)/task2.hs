@@ -13,9 +13,21 @@ main = do
     print $ containsWord t3 "bdi" == True
     print $ containsWord t3 "ac" == False
 
+containsWord :: BTree -> String -> Bool
+containsWord Nil [] = True
+containsWord (Node value Nil Nil) [x] = x == value
+containsWord tree@(Node value left right) word@(x:xs)
+ | x == value = helper tree word
+ | otherwise = containsWord left word || containsWord right word
+ where
+    helper (Node value Nil Nil) [x] = x == value
+    helper (Node value left right) (x:xs) = x == value
+                                    && (helper left xs || helper right xs)
+    helper  _ _ = False
+containsWord  _ _ = False
 
 
-
+data BTree = Nil | Node Char BTree BTree
 
 -- t1:      a
 --         / \

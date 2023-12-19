@@ -1,10 +1,35 @@
+import Data.List
+
 main :: IO()
 main = do
     print $ allContain [t1, t2] == ["acd","cd","d"]
     print $ allContain [t1, t2, t3] == []
     print $ allContain [t3, t4] == ["g"]
 
+allContain :: [BTree] -> [String]
+allContain = foldl1 intersect . map genWords
 
+traverseDFS :: BTree -> [String]
+traverseDFS Nil = []
+traverseDFS (Node value Nil Nil) = [[value]]
+traverseDFS (Node value left right) = map (value:) (traverseDFS left) ++ map (value:) (traverseDFS right)
+    ++ traverseDFS left ++ traverseDFS right
+
+genWords :: BTree -> [String]
+genWords tree = filter (containsWord tree) $ traverseDFS tree
+
+containsWord :: BTree -> String -> Bool
+containsWord Nil [] = True
+containsWord (Node value Nil Nil) [x] = x == value
+containsWord tree@(Node value left right) word@(x:xs)
+ | x == value = helper tree word
+ | otherwise = containsWord left word || containsWord right word
+ where
+    helper (Node value Nil Nil) [x] = x == value
+    helper (Node value left right) (x:xs) = x == value
+                                    && (helper left xs || helper right xs)
+    helper  _ _ = False
+containsWord  _ _ = False
 
 data BTree = Nil | Node Char BTree BTree
 
