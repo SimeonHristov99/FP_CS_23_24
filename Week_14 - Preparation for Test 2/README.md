@@ -2,7 +2,6 @@
 
 Today we'll be having an unusual session.
 The idea is for you to solve the tasks in groups and for us to help out whenever you have questions and/or problems.
-Once a group is ready you'll send the solution over Moodle and we'll take a look at it.
 
 Split in groups of 4-6 people and solve the tasks for today in groups.
 
